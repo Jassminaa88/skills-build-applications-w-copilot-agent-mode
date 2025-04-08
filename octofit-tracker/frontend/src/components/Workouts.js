@@ -4,7 +4,7 @@ function Workouts() {
   const [workouts, setWorkouts] = useState([]);
 
   useEffect(() => {
-    fetch('https://[REPLACE-THIS-WITH-YOUR-CODESPACE-NAME]-8000.app.github.dev/api/workouts')
+    fetch('https://your-codespace-name-8000.app.github.dev/api/workouts')
       .then(response => response.json())
       .then(data => setWorkouts(data));
   }, []);

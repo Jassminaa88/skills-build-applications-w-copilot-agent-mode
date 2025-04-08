@@ -4,7 +4,8 @@ function Teams() {
   const [teams, setTeams] = useState([]);
 
   useEffect(() => {
-    const apiUrl = `${window.location.origin}/codespaces/api/teams`;
+    // Updated the API endpoint suffix to match the Django REST API structure
+    const apiUrl = `${window.location.origin}/codespaces/api/teams/`;
     fetch(apiUrl)
       .then(response => response.json())
       .then(data => setTeams(data));

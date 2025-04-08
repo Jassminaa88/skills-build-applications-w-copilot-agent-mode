@@ -4,7 +4,8 @@ function Users() {
   const [users, setUsers] = useState([]);
 
   useEffect(() => {
-    const apiUrl = `${window.location.origin}/codespaces/api/users`;
+    // Updated the API endpoint suffix to match the Django REST API structure
+    const apiUrl = `${window.location.origin}/codespaces/api/users/`;
     fetch(apiUrl)
       .then(response => response.json())
       .then(data => setUsers(data));

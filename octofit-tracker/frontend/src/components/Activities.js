@@ -4,7 +4,7 @@ function Activities() {
   const [activities, setActivities] = useState([]);
 
   useEffect(() => {
-    const apiUrl = `${window.location.origin}/codespaces/api/activities`;
+    const apiUrl = `${window.location.origin}/codespaces/api/activities/`;
     fetch(apiUrl)
       .then(response => response.json())
       .then(data => setActivities(data));

@@ -4,7 +4,8 @@ function Users() {
   const [users, setUsers] = useState([]);
 
   useEffect(() => {
-    fetch('https://your-codespace-name-8000.app.github.dev/api/users')
+    const apiUrl = `${window.location.origin}/codespaces/api/users`;
+    fetch(apiUrl)
       .then(response => response.json())
       .then(data => setUsers(data));
   }, []);

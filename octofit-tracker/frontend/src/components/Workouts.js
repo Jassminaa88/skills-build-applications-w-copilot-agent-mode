@@ -4,7 +4,8 @@ function Workouts() {
   const [workouts, setWorkouts] = useState([]);
 
   useEffect(() => {
-    fetch('https://your-codespace-name-8000.app.github.dev/api/workouts')
+    const apiUrl = `${window.location.origin}/codespaces/api/workouts`;
+    fetch(apiUrl)
       .then(response => response.json())
       .then(data => setWorkouts(data));
   }, []);

@@ -4,7 +4,8 @@ function Teams() {
   const [teams, setTeams] = useState([]);
 
   useEffect(() => {
-    fetch('https://your-codespace-name-8000.app.github.dev/api/teams')
+    const apiUrl = `${window.location.origin}/codespaces/api/teams`;
+    fetch(apiUrl)
       .then(response => response.json())
       .then(data => setTeams(data));
   }, []);

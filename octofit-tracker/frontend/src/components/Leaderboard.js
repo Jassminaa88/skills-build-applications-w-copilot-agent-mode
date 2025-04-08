@@ -4,7 +4,8 @@ function Leaderboard() {
   const [leaderboard, setLeaderboard] = useState([]);
 
   useEffect(() => {
-    fetch('https://your-codespace-name-8000.app.github.dev/api/leaderboard')
+    const apiUrl = `${window.location.origin}/codespaces/api/leaderboard`;
+    fetch(apiUrl)
       .then(response => response.json())
       .then(data => setLeaderboard(data));
   }, []);

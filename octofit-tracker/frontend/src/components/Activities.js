@@ -4,7 +4,8 @@ function Activities() {
   const [activities, setActivities] = useState([]);
 
   useEffect(() => {
-    fetch('https://your-codespace-name-8000.app.github.dev/api/activities')
+    const apiUrl = `${window.location.origin}/codespaces/api/activities`;
+    fetch(apiUrl)
       .then(response => response.json())
       .then(data => setActivities(data));
   }, []);

@@ -5,7 +5,7 @@ function Teams() {
 
   useEffect(() => {
     // Updated the API endpoint suffix to match the Django REST API structure
-    const apiUrl = `${window.location.origin}/codespaces/api/teams/`;
+    const apiUrl = 'https://<codespace-name>-8000.app.github.dev/api/teams/';
     fetch(apiUrl)
       .then(response => response.json())
       .then(data => setTeams(data));

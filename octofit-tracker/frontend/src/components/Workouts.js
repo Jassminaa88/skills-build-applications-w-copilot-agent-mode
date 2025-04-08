@@ -4,7 +4,7 @@ function Workouts() {
   const [workouts, setWorkouts] = useState([]);
 
   useEffect(() => {
-    const apiUrl = `${window.location.origin}/octofit-tracker/api/workouts`;
+    const apiUrl = 'https://<codespace-name>-8000.app.github.dev/api/workouts/';
     fetch(apiUrl)
       .then(response => response.json())
       .then(data => setWorkouts(data));

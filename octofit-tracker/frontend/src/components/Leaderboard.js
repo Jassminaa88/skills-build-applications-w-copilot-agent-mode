@@ -5,7 +5,7 @@ function Leaderboard() {
 
   useEffect(() => {
     // Updated the API endpoint suffix to match the Django REST API structure
-    const apiUrl = `${window.location.origin}/api/leaderboard/`;
+    const apiUrl = 'https://<codespace-name>-8000.app.github.dev/api/leaderboard/';
     fetch(apiUrl)
       .then(response => response.json())
       .then(data => setLeaderboard(data));

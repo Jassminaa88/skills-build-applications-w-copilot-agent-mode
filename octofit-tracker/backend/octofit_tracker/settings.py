@@ -77,7 +77,7 @@ WSGI_APPLICATION = "octofit_tracker.wsgi.application"
 
 DATABASES = {
     'default': {
-        'ENGINE': 'djongo',
+        'ENGINE': 'djongo',  # Database engine explicitly set to djongo
         'NAME': 'octofit_db',
         'ENFORCE_SCHEMA': True,  # Optional: Enforce schema validation
         'CLIENT': {
